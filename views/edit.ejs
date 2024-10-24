@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editing Book</title>
+  </head>
+  <body>
+    <!-- Form for updating the book -->
+    <form method="post" action="/update/<%= book.id %>">
+      <label for="bname">Book Name</label>
+      <input
+        type="text"
+        id="bname"
+        value="<%= book.bname %>"
+        name="bname">
+     
+      <br /><br />
+
+      <label for="description">Description</label>
+      <input
+        type="text"
+        id="description"
+        value="<%= book.description %>"
+        name="description"><br /><br />
+
+      <button type="submit" class="btn btn-primary">Update Book</button>
+
+      
+    </form>
+  </body>
+</html>
